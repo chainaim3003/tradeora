@@ -3,7 +3,7 @@
   <img width="500"  src="images/Tradeora.png">
 </p>
 
-* ### Trade Finance Oracles for Verifiable Trade Loans and Insurance
+### Trade Finance Oracles for Verifiable Trade Loans and Insurance
 
 Tradeora focuses on 
     Global inclusivity for Small to Medium Enterprises in EXportIMport Trade including developing countries 
