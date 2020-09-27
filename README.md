@@ -3,7 +3,7 @@
   <img width="1000"  src="images/Tradeora.png">
 </p>
 
-Trade finance oracles for. Verifiable Trade Loans and Insurance
+* ### Trade finance oracles for. Verifiable Trade Loans and Insurance
 
 Tradeora focuses on 
     Global inclusivity for Small to Medium Enterprises in EXportIMport Trade including developing countries 
@@ -19,7 +19,6 @@ Tradeora focuses on
 
 * ### [Demo video:] Please follow the link
 
-* ### [SolutionArchitectureAndDesign:] Please follow the link
 
 ## Solution Highlights  
 
@@ -49,14 +48,14 @@ https://github.com/carlosescom/tradeora/blob/master/README.md
 
 ## Illustrations
 
+<img src="images/TradeoraSchematic.png">
 
-## Tradeora :  flow
+
+## Tradeora :  Flow
 
 ChainLink Oracles for trade financing derisking
 
-<img src="images/FlexiTest48%20(1).png">
-
-<img src="zkp/images/ipfs.png"> <img src="zkp/images/json.png"><img src="zkp/images/fire.png" width="100">
+<img src="images/TradeoraFlow.png">
 
 
 # Team
