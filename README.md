@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="1000"  src="images/Tradeora.png">
+  <img width="500"  src="images/Tradeora.png">
 </p>
 
 * ### Trade Finance Oracles for Verifiable Trade Loans and Insurance
