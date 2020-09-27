@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Configuration</title>
+    <link rel="stylesheet" href="../sass/main.css" />
+    <link rel="stylesheet" href="../sass/custom.css" />
+  </head>
+  <body>
+    <div class="py-2 px-5">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand text-white pl-3" href="/">
+          <img
+            src="../assets/finitylogo.png"
+            width="240px"
+            class="d-inline-block align-top font-weight-bold"
+            alt="Logo"
+            loading="lazy"
+          />
+          &nbsp;
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-5 mt-3 mr-auto">
+            <li class="nav-item active px-2">
+              <a class="nav-link text-white font-weight-bold h5" href="/">
+                Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+
+          </ul>
+          <div class="mx-2">
+            <a
+              class="btn btn-success my-2 my-sm-0 mx-2 px-4 py-2"
+              type="submit"
+              href="KiranaLogin.html"
+            >
+              Logout
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    <div class="container">
+        <h2 class="text-center py-3"> Query Example Screen</h2>
+        <div class="row pt-2">
+            <div class="col-4">
+                <div class="card bg-dark">
+                    <h4 class="card-title text-center pt-2">Select Bank</h4>
+
+                    <div class="card-body">
+                        <div class="">
+                            <select class="form-control bg-dark text-white" id="Bank">
+                                <option>Choose Option</option>
+                                <option value="Trichy">Bank of Trichy</option>
+                                <option value="National">National Bank</option>
+                                <option value="NewAge">New Age Lenders</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-4">
+                 <div class="card bg-dark">
+                     <h4 class="card-title text-center pt-2">Desired Duration</h>
+                     <div class="card-body">
+                        <select class="form-control bg-dark text-white" id="duration">
+                            <option>Choose Option</option>
+                            <option value="All">All years</option>
+                            <option value="10">Years</option>
+                        </select>
+                     </div>
+                 </div>
+            </div> -->
+        </div>
+        <div class="row pt-3 pl-3">
+          <form action="">
+            <div class="form-group pl-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Income Tax Returns</label>
+              </div>
+            </div>
+            <div class="form-group pl-3">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Verify BL for Export Invoices</label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+
+        <script src="../../node_modules/axios/dist/axios.min.js"></script>
+
+        <script>
+
+           function processQueryTierForMonthlyGST(institution){
+
+             if(institution == 'BankofTrichy' ){
+
+              processQueryTierForMonthlyGSTIns1();
+
+            }
+
+              else {
+
+                processQueryTierForMonthlyGSTIns2();
+              }
+           }
+
+
+                   function processQueryTierForMonthlyGSTIns1(institution){
+
+                     alert ("in GST Query Tiering Inst 1 ")
+
+                     //var axios = require('axios');
+
+                     var data = JSON.stringify({"requestYear":"2019","mode":"QUERY","queryTiers":[{"name":"tier1","type":"MONTHLYGST","operator":"LESSTHAN","value":"10000"},{"name":"tier2","type":"MONTHLYGST","operator":"BETWEEN","value":"10001-25000"},{"name":"tier3","type":"MONTHLYGST","operator":"BETWEEN","value":"25001-50000"},{"name":"tier4","type":"MONTHLYGST","operator":"GREATERTHAN","value":"50000"}]});
+
+                     var config = {
+                       method: 'post',
+                       url: 'http://localhost:5000/monthlyAvgGSTInTier',
+                       headers: {
+                         'Content-Type': 'application/json'
+                       },
+                       data : data
+                      };
+
+                      axios(config)
+                      .then(function (response) {
+                        console.log(JSON.stringify(response.data));
+                        })
+                        .catch(function (error) {
+                          console.log(error);
+                        });
+
+                     //window.location.href='LPCustomerDetails.html';
+
+                   }
+
+
+                   function processQueryTierForMonthlyGSTIns2(institution){
+
+                     alert ("in GST Query Tiering Inst 2 ")
+
+                     //var axios = require('axios');
+
+                     var data = JSON.stringify({"requestYear":"2019","mode":"QUERY","queryTiers":[{"name":"tier1","type":"MONTHLYGST","operator":"LESSTHAN","value":"10000"},{"name":"tier2","type":"MONTHLYGST","operator":"BETWEEN","value":"10001-25000"},{"name":"tier3","type":"MONTHLYGST","operator":"BETWEEN","value":"25001-50000"},{"name":"tier4","type":"MONTHLYGST","operator":"GREATERTHAN","value":"50000"}]});
+
+                     var config = {
+                       method: 'post',
+                       url: 'http://localhost:5000/monthlyAvgGSTInTier',
+                       headers: {
+                         'Content-Type': 'application/json'
+                       },
+                       data : data
+                      };
+
+                      axios(config)
+                      .then(function (response) {
+                        console.log(JSON.stringify(response.data));
+                        })
+                        .catch(function (error) {
+                          console.log(error);
+                        });
+
+                     //window.location.href='LPCustomerDetails.html';
+
+                   }
+
+
+        </script>
+
+        <div class="Trichy SubMenu">
+
+          <div class="row py-3 pl-4">
+            <h3>MONTHLY GST AVERAGE</h3>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <div class="card bg-dark">
+                <h6 class="card-ttile pt-3 text-center"> QUERY TIERS FOR MONTHLY GST AVERAGE</h6>
+                <div class="card-body">
+                  <table class="table table-dark text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">Range</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> Tier 1 &nbsp; < Rs 10000 </td>
+                      </tr>
+                      <tr>
+                        <td> Tier 2 &nbsp;-&nbsp; Rs 10001-25000 </td>
+                      </tr>
+                      <tr>
+                        <td> Tier 3 &nbsp;-&nbsp; Rs 250001-50000</td>
+                      </tr>
+                      <tr>
+                        <td> Tier 4 &nbsp; > 50000 </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <button type="button" class="btn btn-tertiary px-3" onclick="processQueryTierForMonthlyGST()">
+                  Fetch Query For Tiers
+                </button>
+
+              </div>
+            </div>
+
+    </div>
+
+    <footer class='p-5 footer'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-12 col-md-4'>
+              <div class='pr-lg-5'>
+                <h1 class='heading h6 text-uppercase font-weight-700 mb-3'>
+                  <strong>VeraLoans</strong>
+                </h1>
+              </div>
+            </div>
+
+          <hr />
+          <div class='d-flex align-items-center'>
+            <span class>
+              © 2020
+              <a href='/' class='footer-link' target='_blank'>
+                VeraLoans
+              </a>
+              . All rights reserved.
+            </span>
+            <ul class='nav ml-lg-auto'>
+              <li class='nav-item'>
+                <a class='nav-link' href='https://github.com/'>
+                  <i class='fab fa-github' />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+            $(document).ready(function () {
+                $('#Bank')
+                    .change(function () {
+                    $(this)
+                        .find('option:selected')
+                        .each(function () {
+                        var optionValue = $(this).attr('value');
+                        if (optionValue) {
+                            $('.SubMenu')
+                            .not('.' + optionValue)
+                            .hide();
+                            $('.' + optionValue).show();
+                        } else {
+                            $('.SubMenu').hide();
+                        }
+                        });
+                    })
+                    .change();
+                $('.subtype')
+                    .change(function () {
+                    $(this)
+                        .find('option:selected')
+                        .each(function () {
+                        var suboptionValue = $(this).attr('value');
+                        if (suboptionValue) {
+                            $('.Table')
+                            .not('.' + suboptionValue)
+                            .hide();
+                            $('.' + suboptionValue).show();
+                        } else {
+                            $('.Table').hide();
+                        }
+                        });
+                    })
+                    .change();
+            });
+
+    </script>
+  </body>
+</html>
