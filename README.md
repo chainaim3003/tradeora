@@ -29,6 +29,14 @@ explains the problem and the solution aspects
 
 ### Tradeora 
 
+## To Run:
+
+Open the client app in live server.
+Download the repo run the TradeoraDash.html in local server.
+Change your MetaMask to Kovan Network and reload the page.
+
+Then you can interact with the application.
+
 ###  Focuses on MicroSmallandMediumEnterprises 
 
       Proprietorship business –  10 K to 1 M USD Loans 
