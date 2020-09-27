@@ -15,6 +15,26 @@ var abi = [{
                 "internalType": "string",
                 "name": "loanAmount",
                 "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_poa",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_pod",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_loanDuration",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_mmsi",
+                "type": "string"
             }
         ],
         "name": "batchcall_APIs",
@@ -31,6 +51,11 @@ var abi = [{
             {
                 "internalType": "address",
                 "name": "_addressFIN",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_addressVSL",
                 "type": "address"
             }
         ],
@@ -75,6 +100,17 @@ var abi = [{
     {
         "inputs": [],
         "name": "riskScore",
+        "outputs": [{
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "VSL_Reduction",
         "outputs": [{
             "internalType": "uint256",
             "name": "",
