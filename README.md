@@ -82,7 +82,9 @@ ChainLink Oracles for trade financing derisking
 # Contract Addresses
 * ### APIS:
 Bill Of Lading API Address = 0x8aa6770525aC4f3D5285773C5E8C0c38795d4314
+
 Income Tax Returns Address = 0x1da394a1be2a66F5BBe8F894755Af7d7240A29D0
+
 Vessels API = 0x1dc95B3698d75050815995FD256A206c7C52ae75
 * ### Underwriting:
 Underwriting Contract= 0x38aa7733681A9b4B4743f100E6B837397129eB59
