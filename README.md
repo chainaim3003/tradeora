@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="300"  src="images/tradeora.png">
+  <img width="300"  src="images/Tradeora.png">
   <h1 align= "center">Tradeora</h1>
 </p>
 
@@ -62,13 +62,13 @@ ChainLink Oracles for trade financing derisking
 
 # Team
 
- <img src="images/Slide1.jpg"> 
+ <img src="images/TradeoraTeam.png"> 
 
 * ### Sathya krishnasamy
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/sathya-krishnasamy-3b369a20/)
 
  * ### Shane O'Neil 
-   [<img src="images/linkedin.png">](https://www.linkedin.com/in/shaneoneill1995/)     
+   [<img src="images/linkedin.png">](https://www.linkedin.com/in/shaneoneill1995/) 
 
  * ### Aryan Pandey 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/carlos-noveron)   
