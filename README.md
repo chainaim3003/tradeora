@@ -17,7 +17,7 @@ Tradeora focuses on
 
 * ### [Presentation:](https://drive.google.com/file/d/1YIOu-1YIAvzzAfT118pZpPWD9uhG1Qbl/view?usp=sharing) Please follow the link
 
-* ### [Demo video:] Please follow the link
+* ### [Demo video:] (https://drive.google.com/file/d/1dYTkMynLIBlOxUtW4OYvK8-yyVu44icF/view?usp=sharing) Please follow the link
 
 
 ## Solution Highlights  
