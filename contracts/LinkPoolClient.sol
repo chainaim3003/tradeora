@@ -1,14 +1,9 @@
-/** This example code is designed to quickly deploy an example contract using Remix.
- *  If you have never used Remix, try our example walkthrough: https://docs.chain.link/docs/example-walkthrough
- *  You will need testnet ETH and LINK.
- *     - Ropsten ETH faucet: https://faucet.ropsten.be/
- *     - Ropsten LINK faucet: https://ropsten.chain.link/
- */
  
 pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
-import "https://github.com/smartcontractkit/chainlink/evm-contracts/src/v0.6/ChainlinkClient.sol";
+import "https://raw.githubusercontent.com/smartcontractkit/chainlink/develop/evm-contracts/src/v0.6/ChainlinkClient.sol";
+
 
 contract LinkPoolClient is ChainlinkClient {
     address private oracle;
