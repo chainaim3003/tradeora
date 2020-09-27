@@ -1,7 +1,7 @@
 pragma solidity ^0.6.0;
 pragma experimental ABIEncoderV2;
 
-import "https://raw.githubusercontent.com/smartcontractkit/chainlink/develop/evm-contracts/src/v0.6/ChainlinkClient.sol";
+import "https://github.com/smartcontractkit/chainlink/evm-contracts/src/v0.6/ChainlinkClient.sol";
 //import "https://github.com/smartcontractkit/chainlink/evm-contracts/src/v0.6/interfaces/LinkTokenInterface.sol";
 
 contract Vessels is ChainlinkClient {
@@ -13,13 +13,11 @@ contract Vessels is ChainlinkClient {
     string public full_URL;
     //mapping(bytes32 => uint256) public riskScore_from;
     uint256 public riskReduction;
-
     address linkTokenAddress;
 
     /*
         _oracle = 0x56dd6586DB0D08c6Ce7B2f2805af28616E082455;
         _jobId = "c128fbb0175442c8ba828040fdd1a25e";
-        _API_URL = https://ec2-3-83-110-40.compute-1.amazonaws.com:5000;
     */
     constructor() 
     public {
