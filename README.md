@@ -66,7 +66,8 @@ ChainLink Oracles for trade financing derisking
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/sathya-krishnasamy-3b369a20/)
 
  * ### Shane O'Neil 
-   [<img src="images/linkedin.png">](https://www.linkedin.com/in/shaneoneill1995/) 
+   [<img src="images/linkedin.png">](https://www.linkedin.com/in/shaneoneill1995/)   shaneoneill.eu
+
 
  * ### Carlos Noveron
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/carlos-noveron)   
