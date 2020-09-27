@@ -1,7 +1,6 @@
 
 <p align="center">
-  <img width="500"  src="images/Tradeora.png">
-  <h1 align= "center">Tradeora</h1>
+  <img width="1000"  src="images/Tradeora.png">
 </p>
 
 Trade finance oracles for. Verifiable Trade Loans and Insurance
@@ -70,6 +69,6 @@ ChainLink Oracles for trade financing derisking
  * ### Shane O'Neil 
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/shaneoneill1995/) 
 
- * ### Aryan Pandey 
+ * ### Carlos Noveron
    [<img src="images/linkedin.png">](https://www.linkedin.com/in/carlos-noveron)   
   
