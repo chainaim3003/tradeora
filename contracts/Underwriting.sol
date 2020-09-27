@@ -3,6 +3,7 @@ pragma solidity ^0.6.0;
 import "https://raw.githubusercontent.com/smartcontractkit/chainlink/develop/evm-contracts/src/v0.6/ChainlinkClient.sol";
 import "./BOL.sol";
 import "./LinkPoolClient.sol";
+import "./Vessels.sol";
 
 contract Underwriting{
     
@@ -17,15 +18,20 @@ contract Underwriting{
     address BOLAddress;
     uint256 public BOL_Reduction;
     
+    //importing Vessels Contract
+    address VSLAddress;
+    uint256 public VSL_Reduction;
+    
     
     //set Contract Addresses for API function call contracts
     
-    function setAddressBOL(address _addressBOL,address _addressFIN) external{
+    function setContractAddresses(address _addressBOL,address _addressFIN, address _addressVSL) external{
         BOLAddress = _addressBOL;
         FINAddress = _addressFIN;
+        VSLAddress = _addressVSL;
     }
     
-    //1. Call Financials Contract and get risk_reduction 
+    //1. Call Financials Contract API
     function call_requestFinancialRiskReduction(string memory tradeID, string memory loanAmount) internal{
         riskScore = 100;
         LoanRequest = loanAmount;
@@ -33,9 +39,16 @@ contract Underwriting{
         FIN.evalRiskScore(tradeID, loanAmount);
     }
     
+    //2. Call Bill of lading contract API
     function call_requestBillOfLading() internal returns(uint256){
         BillOfLadingRequest BOL = BillOfLadingRequest(BOLAddress);
         BOL.requestBillOfLading();
+    }
+    
+    //3. Call Vessel location API
+    function call_requestVesselRisk(string memory _poa, string memory _pod, string memory _loanDuration, string memory _mmsi) internal returns(uint256){
+        Vessels VSL = Vessels(VSLAddress);
+        VSL.evalRiskScore(_poa, _pod, _loanDuration, _mmsi);
     }
     
     function getRiskReductionFIN() internal returns(uint256){
@@ -49,16 +62,28 @@ contract Underwriting{
         BOL_Reduction = BOL.risk_reduction();
         riskScore = riskScore - BOL_Reduction;
     }
+    
+    function getRiskReductionVSL() internal returns (uint256){
+        Vessels VSL = Vessels(VSLAddress);
+        VSL_Reduction = VSL.riskReduction();
+        riskScore = riskScore - VSL_Reduction;
+    }
       
      
-    function batchcall_APIs(string memory tradeID, string memory loanAmount) public{
+    function batchcall_APIs(string memory tradeID, string memory loanAmount, string memory _poa, string memory _pod, string memory _loanDuration, string memory _mmsi) public{
         call_requestFinancialRiskReduction(tradeID, loanAmount);
+        call_requestVesselRisk(_poa, _pod, _loanDuration, _mmsi);
         call_requestBillOfLading();
-        
+
+    }
+    
+    function batch_getRiskScore() public{
+        riskScore = 100;
         getRiskReductionFIN();
         getRiskReductionBOL();
+        getRiskReductionVSL();
+        
     }
     
     
 } 
-
