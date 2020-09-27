@@ -23,27 +23,34 @@ Tradeora focuses on
 ## Solution Highlights  
 
 
-1. The Presentation Demonstration, the Video demonstration and GitHub illustrations vividly
+The Presentation Demonstration, the Video demonstration and GitHub illustrations vividly
 
 explains the problem and the solution aspects
 
-Tradeora 
+### Tradeora 
 
-  Focuses on MicroSmallandMediumEnterprises 
+###  Focuses on MicroSmallandMediumEnterprises 
+
       Proprietorship business –  10 K to 1 M USD Loans 
+      
       At the Low end of Goods and Service Tax( India ) or NOT yet in GST
+      
       Exports - Nuetracueticals, Textiles, Food. Imports – Electronics, Chemicals, Raw Material
+      
       Needs access to formal finance
       
-  Specific painpoints
+###  Specific painpoints
+
       Working capital gaps and “Export/ Import” Credits. They produce BLs for loans. 
-      Input Tax Credit Receivables, and Export Duty subsidies eventually arrive but puts lot of short-term cash flow deficit
-      Most of these businesses are operations-oriented and current options for the are very high in interest rates
+      
+      Input Tax Credit Receivables, and Export Duty subsidies eventually arrive but puts lot of short-term cash flow deficit.
+      
+      Most of these businesses are operations-oriented and current options for the are very high in interest rates.
 
 
 Please refer to the details at 
 
-https://github.com/carlosescom/tradeora/blob/master/README.md
+https://github.com/chainaim3003/tradeora/blob/master/README.md
 
 
 ## Illustrations
