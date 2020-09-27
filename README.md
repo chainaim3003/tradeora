@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img width="100"  src="images/Tradeora.png">
+  <img width="500"  src="images/Tradeora.png">
   <h1 align= "center">Tradeora</h1>
 </p>
 
